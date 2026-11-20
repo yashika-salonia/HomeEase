@@ -71,22 +71,6 @@ HomeEase is a full-stack MERN marketplace connecting households with local home-
 
 ---
 
-## Seeded Demo Credentials
-
-| Role | Name | Location | Email | Password |
-| :--- | :--- | :--- | :--- | :--- |
-| Customer | Aarav Mehta | Model Town, Ambala City, Haryana | `customer@homeease.demo` | `Password@123` |
-| Cook | Rekha Joshi | Model Town, Ambala City, Haryana | `rekha.cook@homeease.demo` | `Worker@101` |
-| Cleaner | Pooja Verma | Ambala Cantt, Haryana | `pooja.cleaner@homeease.demo` | `Worker@102` |
-| Plumber | Deepak Tiwari | Sector 9, Ambala City, Haryana | `deepak.plumber@homeease.demo` | `Worker@103` |
-| Electrician | Arjun Nair | Sector 20, Panchkula, Haryana | `arjun.electrician@homeease.demo` | `Worker@104` |
-| Carpenter | Harish Vishwakarma | Sector 22, Chandigarh | `harish.carpenter@homeease.demo` | `Worker@105` |
-| Painter | Manoj Saini | Sector 13, Kurukshetra, Haryana | `manoj.painter@homeease.demo` | `Worker@106` |
-| Construction Labour | Santosh Chauhan | Model Town, Karnal, Haryana | `santosh.labour@homeease.demo` | `Worker@107` |
-| Cook & Cleaner | Savita Pawar | DLF Phase 3, Gurugram, Haryana | `savita.helper@homeease.demo` | `Worker@108` |
-
----
-
 ## REST API Documentation
 
 ### Authentication
