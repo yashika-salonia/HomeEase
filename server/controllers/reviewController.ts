@@ -1,11 +1,11 @@
 import type { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
-import { Booking } from '../models/Booking';
-import { Review } from '../models/Review';
-import { WorkerProfile } from '../models/WorkerProfile';
-import { computeAverageRating } from '../utils/bookingRules';
-import { AppError } from '../middleware/errorHandler';
-import type { AuthRequest } from '../middleware/auth';
+import { Booking } from '../models/Booking.ts';
+import { Review } from '../models/Review.ts';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
+import { computeAverageRating } from '../utils/bookingRules.ts';
+import { AppError } from '../middleware/errorHandler.ts';
+import type { AuthRequest } from '../middleware/auth.ts';
 
 export async function createReview(
   req: AuthRequest,

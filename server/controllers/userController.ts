@@ -1,8 +1,8 @@
 import type { Response, NextFunction } from 'express';
-import { User } from '../models/User';
-import { WorkerProfile } from '../models/WorkerProfile';
-import { AppError } from '../middleware/errorHandler';
-import type { AuthRequest } from '../middleware/auth';
+import { User } from '../models/User.ts';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
+import { AppError } from '../middleware/errorHandler.ts';
+import type { AuthRequest } from '../middleware/auth.ts';
 
 export async function getUserProfile(
   req: AuthRequest,

@@ -3,8 +3,8 @@ import {
   createReview,
   getWorkerReviews,
   getMyReviews,
-} from '../controllers/reviewController';
-import { protect, authorizeRoles } from '../middleware/auth';
+} from '../controllers/reviewController.ts';
+import { protect, authorizeRoles } from '../middleware/auth.ts';
 
 const router = Router();
 

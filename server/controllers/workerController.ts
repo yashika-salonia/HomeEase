@@ -1,10 +1,10 @@
 import type { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
-import { WorkerProfile } from '../models/WorkerProfile';
-import { Review } from '../models/Review';
-import { SERVICE_CATEGORIES } from '../utils/bookingRules';
-import { AppError } from '../middleware/errorHandler';
-import type { AuthRequest } from '../middleware/auth';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
+import { Review } from '../models/Review.ts';
+import { SERVICE_CATEGORIES } from '../utils/bookingRules.ts';
+import { AppError } from '../middleware/errorHandler.ts';
+import type { AuthRequest } from '../middleware/auth.ts';
 
 interface PopulatedUser {
   _id: mongoose.Types.ObjectId;

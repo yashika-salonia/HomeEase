@@ -1,6 +1,6 @@
 import mongoose, { Schema, type Document } from 'mongoose';
 import bcrypt from 'bcryptjs';
-import type { UserRole } from '../utils/bookingRules';
+import type { UserRole } from '../utils/bookingRules.ts';
 
 export interface IUser extends Document {
   name: string;

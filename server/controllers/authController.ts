@@ -1,10 +1,10 @@
 import type { Request, Response, NextFunction } from 'express';
-import { User } from '../models/User';
-import { WorkerProfile } from '../models/WorkerProfile';
-import { signToken } from '../utils/jwt';
-import { validateRegistrationInput } from '../utils/bookingRules';
-import { AppError } from '../middleware/errorHandler';
-import type { AuthRequest } from '../middleware/auth';
+import { User } from '../models/User.ts';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
+import { signToken } from '../utils/jwt.ts';
+import { validateRegistrationInput } from '../utils/bookingRules.ts';
+import { AppError } from '../middleware/errorHandler.ts';
+import type { AuthRequest } from '../middleware/auth.ts';
 
 function sanitizeUser(user: {
   _id: unknown;

@@ -6,8 +6,8 @@ import {
   createWorkerProfile,
   updateWorkerProfile,
   getMyWorkerProfile,
-} from '../controllers/workerController';
-import { protect, authorizeRoles } from '../middleware/auth';
+} from '../controllers/workerController.ts';
+import { protect, authorizeRoles } from '../middleware/auth.ts';
 
 const router = Router();
 

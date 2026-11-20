@@ -5,8 +5,8 @@ import {
   getBookingById,
   updateBookingStatus,
   cancelBooking,
-} from '../controllers/bookingController';
-import { protect, authorizeRoles } from '../middleware/auth';
+} from '../controllers/bookingController.ts';
+import { protect, authorizeRoles } from '../middleware/auth.ts';
 
 const router = Router();
 

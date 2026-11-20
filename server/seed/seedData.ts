@@ -1,8 +1,8 @@
-import { User } from '../models/User';
-import { WorkerProfile } from '../models/WorkerProfile';
-import { Booking } from '../models/Booking';
-import { Review } from '../models/Review';
-import { computeAverageRating } from '../utils/bookingRules';
+import { User } from '../models/User.ts';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
+import { Booking } from '../models/Booking.ts';
+import { Review } from '../models/Review.ts';
+import { computeAverageRating } from '../utils/bookingRules.ts';
 
 const PORTRAITS = {
   cook: '/src/assets/images/worker_cook_portrait_1795163246176.jpg',

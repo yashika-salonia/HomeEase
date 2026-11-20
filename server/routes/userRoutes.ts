@@ -3,8 +3,8 @@ import {
   getUserProfile,
   updateUserProfile,
   changePassword,
-} from '../controllers/userController';
-import { protect } from '../middleware/auth';
+} from '../controllers/userController.ts';
+import { protect } from '../middleware/auth.ts';
 
 const router = Router();
 

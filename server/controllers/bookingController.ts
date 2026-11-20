@@ -1,16 +1,16 @@
 import type { Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
-import { Booking } from '../models/Booking';
-import { WorkerProfile } from '../models/WorkerProfile';
+import { Booking } from '../models/Booking.ts';
+import { WorkerProfile } from '../models/WorkerProfile.ts';
 import {
   calculateQuotedPrice,
   canTransitionBookingStatus,
   generateBookingCode,
   validateBookingInput,
   type BookingStatus,
-} from '../utils/bookingRules';
-import { AppError } from '../middleware/errorHandler';
-import type { AuthRequest } from '../middleware/auth';
+} from '../utils/bookingRules.ts';
+import { AppError } from '../middleware/errorHandler.ts';
+import type { AuthRequest } from '../middleware/auth.ts';
 
 export async function createBooking(
   req: AuthRequest,

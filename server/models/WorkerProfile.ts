@@ -1,5 +1,5 @@
 import mongoose, { Schema, type Document, type Types } from 'mongoose';
-import { SERVICE_CATEGORIES, type PricingType } from '../utils/bookingRules';
+import { SERVICE_CATEGORIES, type PricingType } from '../utils/bookingRules.ts';
 
 export type VerificationStatus = 'Demo Verified' | 'Demo Review Pending' | 'Unverified';
 

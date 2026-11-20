@@ -77,7 +77,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/login" className="hover:text-white transition-colors">
-                  Login &amp; Demo Accounts
+                  Login
                 </Link>
               </li>
             </ul>

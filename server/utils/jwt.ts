@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import type { UserRole } from './bookingRules';
+import type { UserRole } from './bookingRules.ts';
 
 export interface JwtPayload {
   userId: string;

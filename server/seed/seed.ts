@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import { connectDB, disconnectDB } from '../config/db';
-import { seedDatabase, DEMO_ACCOUNTS_DOC } from './seedData';
+import { connectDB, disconnectDB } from '../config/db.ts';
+import { seedDatabase, DEMO_ACCOUNTS_DOC } from './seedData.ts';
 
 async function runSeed() {
   try {

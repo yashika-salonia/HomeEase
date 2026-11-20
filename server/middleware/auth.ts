@@ -1,8 +1,8 @@
 import type { Request, Response, NextFunction } from 'express';
-import { User, type IUser } from '../models/User';
-import { verifyToken } from '../utils/jwt';
-import { AppError } from './errorHandler';
-import type { UserRole } from '../utils/bookingRules';
+import { User, type IUser } from '../models/User.ts';
+import { verifyToken } from '../utils/jwt.ts';
+import { AppError } from './errorHandler.ts';
+import type { UserRole } from '../utils/bookingRules.ts';
 
 export interface AuthRequest extends Request {
   user?: IUser;

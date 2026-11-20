@@ -1,23 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AlertCircle, KeyRound } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { extractErrorMessage } from '../services/api';
-
-const DEMO_CREDENTIALS = [
-  { label: 'Customer — Aarav Mehta', email: 'customer@homeease.demo', password: 'Password@123' },
-  { label: 'Cook — Rekha Joshi', email: 'rekha.cook@homeease.demo', password: 'Worker@101' },
-  { label: 'Cleaner — Pooja Verma', email: 'pooja.cleaner@homeease.demo', password: 'Worker@102' },
-  { label: 'Plumber — Deepak Tiwari', email: 'deepak.plumber@homeease.demo', password: 'Worker@103' },
-  { label: 'Electrician — Arjun Nair', email: 'arjun.electrician@homeease.demo', password: 'Worker@104' },
-  { label: 'Carpenter — Harish Vishwakarma', email: 'harish.carpenter@homeease.demo', password: 'Worker@105' },
-  { label: 'Painter — Manoj Saini', email: 'manoj.painter@homeease.demo', password: 'Worker@106' },
-  { label: 'Construction Labour — Santosh Chauhan', email: 'santosh.labour@homeease.demo', password: 'Worker@107' },
-  { label: 'Cook & Cleaner — Savita Pawar', email: 'savita.helper@homeease.demo', password: 'Worker@108' },
-];
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -74,10 +62,8 @@ export function LoginPage() {
     <div className="min-h-screen flex flex-col bg-[#F8F8F3]">
       <Navbar />
 
-      <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Login Card */}
-          <div className="lg:col-span-6 bg-white border border-[#E2E5DF] rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+      <main className="flex-1 max-w-md w-full mx-auto px-4 sm:px-6 py-12 lg:py-16 flex items-center">
+        <div className="w-full bg-white border border-[#E2E5DF] rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
             <div>
               <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#252B29]">
                 Sign in to HomeEase
@@ -148,51 +134,6 @@ export function LoginPage() {
                 Create an account
               </Link>
             </p>
-          </div>
-
-          {/* Demo Accounts Panel for Live Evaluation */}
-          <div className="lg:col-span-6 bg-white border border-[#E2E5DF] rounded-2xl p-6 sm:p-7 space-y-4">
-            <div className="flex items-center gap-2 text-[#174C3C]">
-              <KeyRound className="w-4 h-4 shrink-0" aria-hidden="true" />
-              <h2 className="font-display text-base font-semibold text-[#252B29]">
-                Seeded Demo Accounts
-              </h2>
-            </div>
-            <p className="text-xs sm:text-sm text-[#5C6662] leading-relaxed">
-              Click any account below to pre-fill the login form with that user&apos;s individual
-              email and password for live customer-to-worker demonstration.
-            </p>
-
-            <div className="divide-y divide-[#E2E5DF] border border-[#E2E5DF] rounded-xl overflow-hidden">
-              {DEMO_CREDENTIALS.map((acc) => (
-                <div
-                  key={acc.email}
-                  className="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#F8F8F3]/60 hover:bg-[#E8F0ED]/50 transition-colors"
-                >
-                  <div className="min-w-0 space-y-0.5">
-                    <p className="text-sm font-medium text-[#252B29] truncate">{acc.label}</p>
-                    <p className="font-mono text-xs text-[#5C6662] break-all">
-                      {acc.email}
-                    </p>
-                    <p className="font-mono text-xs text-[#174C3C]">
-                      Password: {acc.password}
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEmail(acc.email);
-                      setPassword(acc.password);
-                      setError('');
-                    }}
-                    className="px-3 py-1.5 text-xs font-semibold text-[#174C3C] bg-white border border-[#174C3C]/30 rounded-md hover:bg-[#174C3C] hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-                  >
-                    Use Account
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </main>
 

@@ -4,7 +4,7 @@ import {
   SERVICE_CATEGORIES,
   type BookingStatus,
   type PricingType,
-} from '../utils/bookingRules';
+} from '../utils/bookingRules.ts';
 
 export interface IStatusHistoryEntry {
   status: BookingStatus;
